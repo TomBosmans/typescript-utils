@@ -1,5 +1,11 @@
 import { isBlank, isBoolean, isDate, isString } from "../../conditionals"
 
+/**
+ * Casts the given value to a number
+ * @remark
+ * the type of the value will determine the type of the return,
+ * if value can be null and/or undefined so will the return type.
+*/
 export function toNumber<
   Value extends string | Date | boolean | null | undefined
 >(value: Value) {
