@@ -5,32 +5,34 @@
   "main": "src/index.ts",
   "homepage": "https://github.com/TomBosmans/typescript-utils#readme",
   "author": "Tom Bosmans",
-
   "bugs": {
     "url": "https://github.com/TomBosmans/typescript-utils/issues"
   },
-
   "keywords": [
     "typescript",
     "utils"
   ],
-
   "devDependencies": {
+    "@tbosmans/eslint-config": "^1.0.1",
     "@types/jest": "^29.2.3",
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.3"
   },
-
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --fix ."
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TomBosmans/typescript-utils.git"
   },
-
-  "license": "ISC"
+  "license": "ISC",
+  "prettier": "@tbosmans/eslint-config/prettierrc",
+  "eslintConfig": {
+    "extends": "@tbosmans/eslint-config"
+  }
 }
