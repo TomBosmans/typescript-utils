@@ -6,7 +6,7 @@ import { isBlank, isBoolean, isDate, isNumber, isSymbol } from "../../conditiona
  * the type of the value will determine the type of the return,
  * if value can be null and/or undefined so will the return type.
  */
-export function toString<Value extends number | Date | boolean | Symbol | undefined | null>(
+export function toString<Value extends number | Date | boolean | symbol | undefined | null>(
   value: Value,
 ) {
   if (isBlank(value)) return value
