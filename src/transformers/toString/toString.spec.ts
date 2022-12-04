@@ -1,7 +1,7 @@
 import { toString } from "./toString"
 
 const date = new Date()
-const symbol = Symbol('hello world')
+const symbol = Symbol("hello world")
 
 describe("toString", () => {
   it.each([
@@ -9,7 +9,7 @@ describe("toString", () => {
     ["date", date, date.toISOString()],
     ["boolean false", false, "false"],
     ["boolean true", true, "true"],
-    ["symbol", symbol, "Symbol(hello world)"]
+    ["symbol", symbol, "Symbol(hello world)"],
   ])("transforms %s into string", (_, value, expected) => {
     expect(toString(value)).toEqual(expected)
   })

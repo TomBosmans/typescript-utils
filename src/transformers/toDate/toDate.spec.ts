@@ -1,10 +1,7 @@
 import { toDate } from "./toDate"
 
 describe("toDate", () => {
-  it.each([
-    ["2020-03-02"],
-    ["2020-03-02T23:00"],
-  ])("transforms %s into Date", (value) => {
+  it.each([["2020-03-02"], ["2020-03-02T23:00"]])("transforms %s into Date", (value) => {
     expect(toDate(value)).toEqual(new Date(value))
   })
 

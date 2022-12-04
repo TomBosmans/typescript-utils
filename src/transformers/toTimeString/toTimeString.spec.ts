@@ -1,9 +1,7 @@
 import { toTimeString } from "."
 
 describe("toTimeString", () => {
-  it.each([
-    [new Date("2020-03-02"), "00:00:00"],
-  ])("transforms %s into \"%s\"", (value, expected) => {
+  it.each([[new Date("2020-03-02"), "00:00:00"]])('transforms %s into "%s"', (value, expected) => {
     expect(toTimeString(value)).toEqual(expected)
   })
 
