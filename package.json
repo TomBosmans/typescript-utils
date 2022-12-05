@@ -1,6 +1,6 @@
 {
   "name": "@tbosmans/typescript-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utils to work with typescript.",
   "main": "src/index.ts",
   "homepage": "https://github.com/TomBosmans/typescript-utils#readme",
