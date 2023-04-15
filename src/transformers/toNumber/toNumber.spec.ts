@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest"
 import { toNumber } from "./toNumber"
 
 const date = new Date()

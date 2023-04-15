@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest"
 import { toSymbol } from "./toSymbol"
 
 describe("toString", () => {

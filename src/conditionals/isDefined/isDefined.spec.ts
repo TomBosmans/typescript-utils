@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest"
 import { SpecTable } from "../types"
 import { isDefined } from "./isDefined"
 
