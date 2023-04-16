@@ -3,7 +3,8 @@
   "version": "0.0.3",
   "description": "Utils to work with typescript.",
   "license": "ISC",
-  "main": "src/index.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "homepage": "https://github.com/TomBosmans/typescript-utils#readme",
   "author": "Tom Bosmans",
   "repository": {
@@ -26,6 +27,7 @@
   },
   "scripts": {
     "test": "vitest",
+    "build": "tsc",
     "format:fix": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:fix": "eslint --fix .",
@@ -38,7 +40,8 @@
       "@tbosmans/eslint-config/typescript"
     ],
     "ignorePatterns": [
-      "build/**/*"
+      "build/**/*",
+      "node_modules/**/*"
     ]
   }
 }

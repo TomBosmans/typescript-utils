@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "es5",
     "module": "commonjs",
-    "outDir": "./build",
-    "rootDir": "./src",
-    "skipLibCheck": true,
     "strict": true,
-    "target": "es2016"
-  }
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "build",
+    "forceConsistentCasingInFileNames": true
+  },  
+
+  "include": ["src"]
 }
