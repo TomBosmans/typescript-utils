@@ -1,10 +1,18 @@
 import { isBlank, isBoolean, isDate, isNumber, isSymbol } from "../../conditionals"
 
 /**
- * Casts the given value to a string
- * @remark
- * the type of the value will determine the type of the return,
- * if value can be null and/or undefined so will the return type.
+ * Converts a number, Date object, boolean, symbol, null, or undefined to a string.
+ * @param value The value to be converted to a string.
+ * @returns Returns a string if the input value is a number, Date object, boolean, symbol, otherwise returns null or undefined.
+ * @throws Throws an error if the input value is not a number, Date object, boolean, symbol, null, or undefined.
+ * @example
+ *
+ * toString(123); // '123'
+ * toString(new Date('2022-01-01T00:00:00.000Z')); // '2022-01-01T00:00:00.000Z'
+ * toString(true); // 'true'
+ * toString(null); // null
+ * toString(undefined); // undefined
+ * toString({}); // Error: can't be cast to string
  */
 export function toString<Value extends number | Date | boolean | symbol | undefined | null>(
   value: Value,

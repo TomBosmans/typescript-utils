@@ -1,10 +1,11 @@
 /**
- * When array does not contain value, it will be added.
- * When array does contain value, it will be removed.
- * @remark
- * Value can only be type string or number.
- * @todo
- * Extend to work with more types.
+ * Adds or removes the given value from an array, depending on whether it is already present or not.
+ * @param value The value to be added or removed.
+ * @param array The array to add or remove the value from.
+ * @returns Returns a new array with the value added or removed, depending on whether it was already present or not.
+ * @example
+ * addOrRemove('hello', ['world']); // ['world', 'hello']
+ * addOrRemove('world', ['world']); // []
  */
 export const addOrRemove = <Value extends string | number>(
   value: Value,

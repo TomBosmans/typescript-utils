@@ -1,10 +1,15 @@
 import { isBlank, isString } from "../../conditionals"
 
 /**
- * Casts the given value to a Date.
- * @remark
- * the type of the value will determine the type of the return,
- * if value can be null and/or undefined so will the return type.
+ * Converts a string to a Date object.
+ * @param value The string value to be converted.
+ * @returns Returns a Date object if the input value is a string, otherwise returns null or undefined.
+ * @throws Throws an error if the input value is not a string, null, or undefined.
+ * @example
+ * toDate('2022-01-01'); // new Date('2022-01-01')
+ * toDate(null); // null
+ * toDate(undefined); // undefined
+ * toDate(123); // Error: can't be cast to Date
  */
 export function toDate<Value extends string | null | undefined>(value: Value) {
   if (isBlank(value)) return value
