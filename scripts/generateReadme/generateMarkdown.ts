@@ -7,16 +7,19 @@ export default function generateMarkdown(filePath: string): string {
     .replace(/\.ts$/, "")
     .split("/")
     .pop() as string
+  const { description, example } = extractDescription(filePath)
   const specifications = extractSpecifications(filePath)
-  const description = extractDescription(filePath)
 
   return `
 ### ${header}
-
-#### Description
 ${description}
 
 #### Specifications
 ${specifications}
+
+#### Examples
+\`\`\`typescript
+${example}
+\`\`\`
 `
 }
