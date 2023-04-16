@@ -31,7 +31,8 @@
     "format:fix": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:fix": "eslint --fix .",
-    "lint:check": "eslint ."
+    "lint:check": "eslint .",
+    "generate:readme": "ts-node scripts/generateReadme"
   },
   "prettier": "@tbosmans/eslint-config/prettierrc",
   "eslintConfig": {
