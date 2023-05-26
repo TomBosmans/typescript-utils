@@ -1,3 +1,5 @@
+import { isString } from "../isString"
+
 const TIME_REGEX = /^([0-1][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9]))?$/
 
 /**
@@ -10,6 +12,7 @@ const TIME_REGEX = /^([0-1][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9]))?$/
  * isTimeString('12:34'); // true
  * isTimeString('12:34:56:78'); // false
  */
-export function isTimeString(value: string) {
+export function isTimeString(value: unknown) {
+  if (!isString(value)) return false
   return TIME_REGEX.test(value)
 }

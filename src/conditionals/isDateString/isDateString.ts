@@ -1,3 +1,5 @@
+import { isString } from "../isString"
+
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
 const MONTH_LENGTHS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
@@ -9,7 +11,8 @@ const MONTH_LENGTHS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
  * isDateString('2022-04-16'); // true
  * isDateString('2022/04/16'); // false
  */
-export function isDateString(value: string) {
+export function isDateString(value: unknown) {
+  if (!isString(value)) return false
   if (!DATE_REGEX.test(value)) return false
 
   const dateParts = value.split("-")
