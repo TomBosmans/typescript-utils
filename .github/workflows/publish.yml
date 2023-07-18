@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Publish
 
 on:
   workflow_dispatch:
@@ -52,7 +52,5 @@ jobs:
       - name: Install dependencies and build 🔧
         run: npm ci && npm run build
 
-      - name: Publish package on NPM 📦
+      - name: Publish package 📦
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
